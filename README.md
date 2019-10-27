@@ -3,5 +3,5 @@ Le  Jeu  de  la  Vie  (ou  Game  of  Life)  est,  en  réalité,  un  automate  
 
 ### v1.0
 Dans le prmière version du **Jeu de la vie**, j'ai ajouté les fonctions suivantes:
-⋅⋅* **alloue_grille(int l, int c, grille *g)** qui prend en paramètre les entières l (les lignes de la grille) et c (le colonnes de la grille) et g - un pointeur sur la grille, qui va allouer dans la mémoire la grille et les cellules de la grille
-⋅⋅*  **libere_grille(grille *g)** qui prend en paramètre le pointeur sur la grille, qui va libérer l'espace allouée précédemment 
+* **alloue_grille(int l, int c, grille *g)** qui prend en paramètre les entières l (les lignes de la grille) et c (le colonnes de la grille) et g - un pointeur sur la grille, qui va allouer dans la mémoire la grille et les cellules de la grille
+*  **libere_grille(grille *g)** qui prend en paramètre le pointeur sur la grille, qui va libérer l'espace allouée précédemment 
