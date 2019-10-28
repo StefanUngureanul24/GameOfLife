@@ -16,5 +16,9 @@ J'ai modifié la fonction debut_jeu(grille \*g, grille \*gc) pour qu'elle soit c
 J'ai ajouté les fonctions suivantes :
 * int compte_voisins_vivants_cyclique(int i, int j, grille g) - qui compte les voisins d'une cellule dans le mode cyclique (*i* - l'indice sur la ligne, *j* - l'indice sur la colonne, *g* - le pointeur sur la grille)
 * int compte_voisins_vivants_noncyclique(int i, int j, grille g) - qui compte les voisins d'une cellules dans le mode non-cyclique (*i* - l'indice sur la ligne, *j* - l'indice sur la colonne, *g* - le pointeur sur la grille)
-* int (\* compte_voisins_vivants) (int i, int j, grille g) - fonction qui fait référence soit vers l'adresse de **compte_voisins_vivants_cyclique** si on est dans le mode cyclique, soit vers **compte_voisins_vivants_noncyclique** si on est dans le mode non-cyclique
+* int (\* compte_voisins_vivants) (int i, int j, grille g) - fonction qui fait référence soit vers l'adresse de **compte_voisins_vivants_cyclique** si on est dans le mode cyclique, soit vers **compte_voisins_vivants_noncyclique** si on est dans le mode non-cyclique<br />
 Pour détérminer si on est dans le mode cyclique ou dans le mode non-cyclique, j'ai ajouté dans la fonction **debut_jeu** une variable *cyclique* (initialisée à 1, parce que on suppose qu'on est déjà dans le mode cyclique), en faisant l'appel des fonctions qui correspondent au mod cyclique, respectivement mod non-cyclique, en fonctions de la valeur de la variable (1 - pour le mode cyclique, 0 - pour le mode non-cyclique).
+
+### v2.3
+J'ai ajouté la fonction **static inline void vieillissement(int i, int j, grille g, int age)** qui est une fonction pour le vieillissement de la grille, qui incrémente la valeur d'une cellule si son âge est compris entre 1 et 8. Si son âge va dépasser l'age 8, la cellule va mourir. Pour l'instant, je n'ai ajouté que le prototype de la fonction.<br />
+Ensuite j'ai ajouté, la documentation du code.
