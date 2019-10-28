@@ -8,3 +8,6 @@ Dans le prmière version du **Jeu de la vie**, j'ai ajouté les fonctions suivan
 
 ### v2.0
 Petites modifications sur **README.md** et l'ajout de **case 'n'** dans le fichier **io.h** qui nous permet, lorsqu'on touche le clavier n de entrer le chemin d'un nouveau fichier qui contient la grille choisie.
+
+### v2.1
+J'ai modifié la fonction **debut_jeu(grille *g, grille *gc)** pour qu'elle soit capable d'afficher le temps d'évolution d'une grille (avec une variable *temps*, initialisée à 0, incrémente pendant chaque évolution de la grille). Ensuite, j'ai ajouté un nouveau cas **case 'c'**, qui permet d'activer ou de déactiver le mode cyclique d'évolution de la grille (s'il s'agit d'une grille cyclique).
