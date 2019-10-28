@@ -10,4 +10,11 @@ Dans le prmière version du **Jeu de la vie**, j'ai ajouté les fonctions suivan
 Petites modifications sur **README.md** et l'ajout de **case 'n'** dans le fichier **io.h** qui nous permet, lorsqu'on touche le clavier n de entrer le chemin d'un nouveau fichier qui contient la grille choisie.
 
 ### v2.1
-J'ai modifié la fonction **debut_jeu(grille *g, grille *gc)** pour qu'elle soit capable d'afficher le temps d'évolution d'une grille (avec une variable *temps*, initialisée à 0, incrémente pendant chaque évolution de la grille). Ensuite, j'ai ajouté un nouveau cas **case 'c'**, qui permet d'activer ou de déactiver le mode cyclique d'évolution de la grille (s'il s'agit d'une grille cyclique).
+J'ai modifié la fonction debut_jeu(grille \*g, grille \*gc) pour qu'elle soit capable d'afficher le temps d'évolution d'une grille (avec une variable *temps*, initialisée à 0, incrémente pendant chaque évolution de la grille). Ensuite, j'ai ajouté un nouveau cas **case 'c'**, qui permet d'activer ou de déactiver le mode cyclique d'évolution de la grille (s'il s'agit d'une grille cyclique).
+
+### v2.2
+J'ai ajouté les fonctions suivantes :
+* int compte_voisins_vivants_cyclique(int i, int j, grille g) - qui compte les voisins d'une cellule dans le mode cyclique (*i* - l'indice sur la ligne, *j* - l'indice sur la colonne, *g* - le pointeur sur la grille)
+* int compte_voisins_vivants_noncyclique(int i, int j, grille g) - qui compte les voisins d'une cellules dans le mode non-cyclique (*i* - l'indice sur la ligne, *j* - l'indice sur la colonne, *g* - le pointeur sur la grille)
+* int (\* compte_voisins_vivants) (int i, int j, grille g) - fonction qui fait référence soit vers l'adresse de **compte_voisins_vivants_cyclique** si on est dans le mode cyclique, soit vers **compte_voisins_vivants_noncyclique** si on est dans le mode non-cyclique
+Pour détérminer si on est dans le mode cyclique ou dans le mode non-cyclique, j'ai ajouté dans la fonction **debut_jeu** une variable *cyclique* (initialisée à 1, parce que on suppose qu'on est déjà dans le mode cyclique), en faisant l'appel des fonctions qui correspondent au mod cyclique, respectivement mod non-cyclique, en fonctions de la valeur de la variable (1 - pour le mode cyclique, 0 - pour le mode non-cyclique).
