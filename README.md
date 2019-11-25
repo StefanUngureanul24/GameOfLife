@@ -22,3 +22,11 @@ Pour détérminer si on est dans le mode cyclique ou dans le mode non-cyclique, 
 ### v2.3
 J'ai ajouté la fonction **static inline void vieillissement(int i, int j, grille g, int age)** qui est une fonction pour le vieillissement de la grille, qui incrémente la valeur d'une cellule si son âge est compris entre 1 et 8. Si son âge va dépasser l'age 8, la cellule va mourir. Pour l'instant, je n'ai ajouté que le prototype de la fonction.<br />
 Ensuite j'ai ajouté, la documentation du code.
+
+### v2.4
+J'ai changé le contenu du programme, en ajoutant quelque fonctions:
+* affiche_compteur() - fonction qui affiche le compteur pour chaque étape de l'évolution
+* affiche_cyclique() - fonction qui affiche l'état du mode cyclique
+* affiche_vieillissement() - fonction qui affiche l'âge de chaque cellule
+* change_cycle() - qui fait l'échange de mode cyclique en mode non-cyclique ou de mode non-cyclique en mode non-cyclique<br />
+En plus, j'ai fait des modifications sur la fonction **compte_voisins_vivants**, qui determine les voisins de chaque cellule
