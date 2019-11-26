@@ -30,3 +30,8 @@ J'ai changé le contenu du programme, en ajoutant quelque fonctions:
 * affiche_vieillissement() - fonction qui affiche l'âge de chaque cellule
 * change_cycle() - qui fait l'échange de mode cyclique en mode non-cyclique ou de mode non-cyclique en mode non-cyclique<br />
 En plus, j'ai fait des modifications sur la fonction **compte_voisins_vivants**, qui determine les voisins de chaque cellule
+
+### v3.0
+J'ai ajouté deux fonctions:
+*  **static inline void set_non_viable(int i, int j, grille g)**, qui initialise les cellules en prenant les coordonnées trouvées
+* **static inline int est_non_viable(int i, int j, grille g)**, qui vérifie si cellule est non_viable et en utilisant cette fonction, dans la fonction **affiche_ligne(int c, int* ligne)** si une cellule est non_viable, alors on va afficher *X*
