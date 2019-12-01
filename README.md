@@ -37,7 +37,7 @@ J'ai ajouté deux fonctions:
 * **static inline int est_non_viable(int i, int j, grille g)**, qui vérifie si cellule est non_viable et en utilisant cette fonction, dans la fonction **affiche_ligne(int c, int* ligne)** si une cellule est non_viable, alors on va afficher *X*
 
 ### v4.0
-J'ai implementé l'affichage et l'utilisation de l'interface graphique et changé le makefile, pour bien compiler le code après la nouveau repartition des fichiers et pour bien traiter les deux cas: si on l'execute en mode texte ou en utilisant l'interface graphique. (**make MODE=TEXTE** et puis **bin/main grilles/grille<numéro de la grille>.txt** en mode texte ou bien **make** et puis **bin/main grilles/grille<numéro de la grille>.txt** si on veut utiliser l'interface graphique).
+J'ai implementé l'affichage et l'utilisation de l'interface graphique et changé le makefile, pour bien compiler le code après la nouveau repartition des fichiers et pour bien traiter les deux cas: si on l'execute en mode texte ou en utilisant l'interface graphique. (**make MODE=TEXTE** et puis **bin/main grilles/grille<numéro de la grille>.txt** en mode texte ou bien **make** et puis **bin/main grilles/grille<numéro de la grille>.txt** si on veut utiliser l'interface graphique - et **make clean** avant de passer d'un mode à un autre).
 
 ### v5.0 
 J'ai ajouté les fonctions pour la detection des oscillations:
