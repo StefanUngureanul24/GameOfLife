@@ -35,3 +35,11 @@ En plus, j'ai fait des modifications sur la fonction **compte_voisins_vivants**,
 J'ai ajouté deux fonctions:
 *  **static inline void set_non_viable(int i, int j, grille g)**, qui initialise les cellules en prenant les coordonnées trouvées
 * **static inline int est_non_viable(int i, int j, grille g)**, qui vérifie si cellule est non_viable et en utilisant cette fonction, dans la fonction **affiche_ligne(int c, int* ligne)** si une cellule est non_viable, alors on va afficher *X*
+
+### v4.0
+J'ai implementé l'affichage et l'utilisation de l'interface graphique et changé le makefile, pour bien compiler le code après la nouveau repartition des fichiers et pour bien traiter les deux cas: si on l'execute en mode texte ou en utilisant l'interface graphique. (**make MODE=TEXTE** et puis **bin/main grilles/grille<numéro de la grille>.txt** en mode texte ou bien **make** et puis **bin/main grilles/grille<numéro de la grille>.txt** si on veut utiliser l'interface graphique).
+
+### v5.0 
+J'ai ajouté les fonctions pour la detection des oscillations:
+*	**int tester_oscillations(grille *g, grille *gc, grille *gcc)**, qui determine si la grille est oscillante, en renvoyant le nombre d'oscillations si la grille est oscillante ou 0 sinon.
+* 	**int grilles_sont_egales(grille g, grille gcd)**, une fonction si verifie si deux grilles sont égaux.
